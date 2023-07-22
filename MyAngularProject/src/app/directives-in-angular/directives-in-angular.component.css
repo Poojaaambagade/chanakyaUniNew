@@ -1,0 +1,42 @@
+
+.toggle-css {
+    background-color: blueviolet;
+    height: 150px;
+    width: 150px;
+
+}
+.itm-container {
+    color: blue;
+    font-family: 'Courier New';
+    font-size: 18px;
+}
+.table-container{
+    height: 300px;
+    width:250px;
+    background-color: coral;
+        
+}
+table,tr,th,td{
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding: 5px 5px;
+
+} 
+.container{
+    font-size: 25px;
+    color:maroon;
+}
+.container5{
+    font-size: 25px;
+    color:pink;
+}
+.div-contain{
+    font-size: 25px;
+    color:red;
+}
+.container1{
+    color:darkslateblue;
+}
+.container0{
+    font-size: 30px;
+}

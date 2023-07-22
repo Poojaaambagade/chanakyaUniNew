@@ -1,0 +1,109 @@
+<p>directives-in-angular works!</p>
+
+<!--1) Component Directives (*ngIf) => if you want to show or hide the element data in UI then used *ngIf -->
+
+<div>
+    <div *ngIf="show">I live in mumbai </div>
+    <p *ngIf="toShowPara1">pooja</p>
+    <!-- <p *ngIf="unDefinedProperty='pooja'"> testtest</p>(In component op i.e *ngIf(not possible to assigned the valueto the property)) -->
+    <!-- <p *ngIf="nullProperty">ppppp</p> (property NULL is consider as false in *ngIf) -->
+</div>
+
+<!-- Toggle Effect -->
+
+<div class="toggle-css" *ngIf="toggle"></div>
+<button (click)="toggleEffect()"> click</button>
+
+<!--2) structural component (*ngFor) = it is used to arranged array data in table or list format (only we can used in array)
+always used in parent class-->
+
+<!-- *ngFor for single array -->
+
+<ul *ngFor="let data of cars">
+    <li class='itm-container'>{{data}}</li>
+</ul>
+
+<!-- *ngFor for multiple array (for multiple array you have to prepare table)-->
+<!-- 1) first way -->
+<!-- <table class="table-container">
+    <tr>
+        <th>carName</th>
+        <th>carPrice</th>
+        <th>color</th>
+    </tr>
+    <tr *ngFor="let tableData of carDetails">
+    <td>{{tableData.carName}}</td>
+    <td>{{tableData.carPrice}}</td>
+    <td>{{tableData.color}}</td>
+</tr>
+</table> -->
+
+<!-- 2) second way  -->
+
+<table class="table-container">
+    <tr>
+        <th *ngFor="let heading of tableHeading">
+            {{heading}}
+        </th>
+    </tr>
+    <tr *ngFor="let data of carDetails">
+        <td>{{data.carName}}</td>
+        <td>{{data.carPrice}}</td>
+        <td>{{data.color}}</td>
+
+    </tr>
+</table>
+
+<!-- ngSwitch -->
+
+<div [ngSwitch]="ngSwitchValue">
+    <h3 *ngSwitchCase="200">200 values</h3>
+    <h3 *ngSwitchCase="100">100 values</h3>
+    <h3 *ngSwitchCase="300">300 values</h3>
+    <h3 *ngSwitchDefault>defalut h2</h3>
+</div>
+
+
+
+<!-- array in array using ngFor -->
+<ul *ngFor="let data of data2">
+    <li>{{data}}</li>
+</ul>
+<ul *ngFor="let data1 of data3">
+    <li>{{data1}}</li>
+</ul>
+
+<!-- ngSwitch attribute -->
+
+
+<!-- atrribute directives=ngClass -->
+
+<div [ngClass]="color=='pink'? 'container' : 'container5'">i love pune</div>
+<div [ngClass]="ngClass=='pooja'? 'container0' : 'container5'">i am pooja </div>
+<div [ngClass]="color1=='red' ? 'div-contain': 'container'">i like way of mumbai</div>
+
+
+  <!-- atribute directives = (ngStyle) -->
+
+  <p [ngStyle] = "styleCss=='yellow' ? {'color':'blue'} : {'color' : 'green' }">pooja ambagade </p>
+
+  <p [ngStyle]="sytle1=='red1' ? {'color':'black'} : {'color' : 'green' , 'font-size' : '30px'}">paraparapara</p>
+
+  <!-- CSS used in multiple classes (like more than two classes)-->
+  <h2 [class.container]="multiclasses==200"
+    [class.container5]="multiclasses==100"
+    [class.container1]="multiclasses==300">
+    testtest
+</h2>
+
+<div [class.container1]="name=='chinku'"
+     [class.container5]="name=='pinku'"
+     [class.container0]="name=='tinku'">
+    h2222222h55555555
+</div>
+
+
+
+
+
+

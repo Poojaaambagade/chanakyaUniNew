@@ -1,0 +1,68 @@
+.login-form-container {
+
+    background-color: antiquewhite;
+    height: 232px;
+    width: 208px;
+    border: 1px solid black;
+    padding: 2px 2px;
+    text-align: center;
+    position: relative;
+    margin: auto;
+}
+.login-css {
+    background-color: antiquewhite;
+    height: 1000px;
+    width: 100%;
+}
+.heading-css{
+    text-align: center;
+}
+.form-css{
+    border: 1px solid black;
+    height: 350px;
+    width: 350px;
+    margin: auto;
+    text-align: center;
+    background-color: darkturquoise;
+}
+.usr-css{
+    font-size: 17px;
+    position: relative;
+    top: 29px;
+}
+.usrinp-css{
+    width: 220px;
+    padding: 3px 3px;
+    margin-top: 34px;
+}
+.pass-css{
+    font-size: 17px;
+    position: relative;
+    top: 74px;
+    margin-right: 45px
+
+}
+.passinp-css{
+    width: 220px;
+    padding: 3px 3px;
+    margin-top: 82px;
+}
+.sb-css{
+    font-size: 17px;
+    border: none;
+    padding: 2px 2px;
+    margin-top: 68px;
+    background-color: greenyellow;
+}
+.bck-btn{
+    border: none;
+    background-color: aquamarine;
+    padding: 2px 2px;
+}
+.spn-err{
+    color: darkred;
+    font-size: 15px;
+    margin-left: 25px;
+
+}
+    

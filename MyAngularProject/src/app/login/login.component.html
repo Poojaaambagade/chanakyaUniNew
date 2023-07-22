@@ -1,0 +1,105 @@
+ <!-- <button routerLink="/home">back to home</button>
+ <p>login works!</p>
+ <h4> abcdefghijk</h4>
+
+<div class="login-form-container">
+    <!-- login form -->
+  <!-- <p> WELCOME {{studentName}}</p>
+    <h3> {{formTitleTest()}}</h3>
+    <h3>{{test}}</h3>
+    <div>
+        <form>
+            <label> Email </label>
+            <input type="text"><br><br>
+            <label> password </label>
+            <input type = "text"><br><br>
+            <button (click)="submit()">submit</button>
+        </form>
+ </div>
+</div> -->
+
+<!-- 1. property name : datatype = value; (assigned the value)
+    2. property name ! : datatype; (only declared property) 
+    3. property nae :any; (it will accepty any datatype value)-->
+
+    <!-- ONE WAY DATA BINDING (str interpolation) -->
+
+    <!-- {{pan}}<br>
+    {{pan1}}<br>
+    {{pan2}}<br>
+    {{amount}}<br>
+    {{studentMarks}}<br> -->
+
+    <!-- using typeOf Operator in property
+    {{typeOf(studentActive)}} (giving ERROR it will not fetch)-->
+
+    <!-- functions -->
+    <!-- {{interpolationTest()}}<br> -->
+
+    <!-- using typeOf operator in functions -->
+     <!-- {{formTitle1()}} <br> in function typeof operator wil works  -->
+
+     <!-- {{10*30}}<br> -->
+     <!-- {{amount=900}}  we cannot assigned the value in str interpolation-->
+     <!-- {{amount==200}}<br><br> -->
+
+     <!-- property binding -->
+
+     <!-- Name:<input type="text" [value]="myName"><br>
+     Gender:<input type="radio" [checked]="gender"><br>
+     <input type="text" [value]="testingEventDB"> -->
+
+     <!-- Event binding -->
+
+     <!-- <button (click)="testingEventBinding()">button</button><br><br>
+     {{testingEventDB}} -->
+
+     <!-- two way data binding (we have to import FormsModule in APP.MODULE.TS file)-->
+
+     <!-- <input type="text" [(ngModel)]="city">
+    {{city}}<br> -->
+
+    <!-- <div class="login-css">
+        <h3 class="heading-css">LOGIN SCREEN </h3>
+        <form class="form-css">
+            <label class="usr-css">UserName</label><br>
+            <input type="text" class="usrinp-css" ><br>
+            <label class="pass-css">password</label><br>
+            <input type="text" class="passinp-css"><br>
+            <button class="sb-css"> submit</button>
+        </form>
+    </div> -->
+
+<div class="login-css">
+
+    <button (click)="back()" class="bck-btn">back button</button>
+
+    <h3 class="heading-css"> LOGIN SCREEN </h3>
+
+    <form #loginForm='ngForm' class="form-css">
+
+        <label class="usr-css"> Full Name </label><br>
+
+        <input type="text" class="usrinp-css" name="fullName" ngModel #fullName="ngModel" pattern="[a-zA-z ]*$" minlength="5" maxlength="10"><br>
+
+        <!-- <span class="spn-err" *ngIf="fullName.errors?.['required'] && fullName.touched">Full Name is required</span> -->
+
+        <span class="spn-err" *ngIf="fullName.errors?.['pattern'] && fullName.touched">Please Enter Alphabet Only</span>
+        <span class="spn-err" *ngIf="fullName.errors?.['minlength'] && !fullName.errors?.['pattern']">Full Name Should Be Having Atleast 5 Character</span>
+        
+        <span></span>
+
+        <label class="pass-css">password</label><br>
+
+        <input type="text" class="passinp-css" name='password' ngModel #password="ngModel"  minlength="8" pattern="[A-Z]{1}[a-zA-z0-9@#$%^!*&]{9}$"><br>
+
+        <span class="spn-err" *ngIf="password.errors?.['minlength']">password should contain 8 characters</span>
+        <span class="spn-err" *ngIf="password.errors?.['pattern'] && !password.errors?.['minlength']">please match the pattern</span>
+       
+        <button class="sb-css" (click)="submitOne(loginForm.value)"> submit </button>
+
+    </form>
+
+</div>
+
+    

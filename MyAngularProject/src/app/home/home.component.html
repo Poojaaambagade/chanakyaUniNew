@@ -1,0 +1,18 @@
+<p>home works!</p>
+
+<!-- redirected through routerLink -->
+
+<button routerLink="/login">login component</button>&nbsp;
+<button routerLink="/signUp">signUp component</button>&nbsp;
+<button routerLink="/admin/adminLogin"> admin login component</button>&nbsp;
+<button routerLink="/admin/adminSignUp">admin signup component</button>&nbsp;
+<button routerLink="/owner/ownerLogin">admin login compo</button><br><br>
+<!-- creating back button concept in login compo -->
+<!--wild card concept if you delete any compo like(admin login)and creat button in home page then it will show error pathnotfound firstly create pthnotfound compo-->
+<!-- if you want to create ADMIN as a landing screen then it will create but it will not redirect-->
+
+<!-- redirected through .ts file-->
+
+<button (click)="loginCompo()">login compo</button>&nbsp;
+<button (click)="adminModuleLoginCompo()">Admin login component</button>&nbsp;
+<button (click)="userLoginCompo()">user login compo</button>
