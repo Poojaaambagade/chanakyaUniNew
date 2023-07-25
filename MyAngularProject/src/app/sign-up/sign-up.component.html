@@ -1,1 +1,69 @@
-<p>sign-up works!</p>
+<div>
+    <button (click)="back1()">back</button>
+    <h2 class="heading-class">SignUp Screen(ReactiveForm)</h2>
+    <form class="signUp-class" [formGroup]="signUpForm">
+
+        <label>Name</label><br>
+        <input type="text" formControlName="name"><br>
+        
+        <span *ngIf="!signUpForm.get('name')?.touched 
+                && !signUpForm.get('name')?.['valid']
+                && !signUpForm.get('name')?.dirty">
+                Hint : Enter your Name
+            </span>
+        <span class="err" *ngIf="signUpForm.get('name')?.errors?.['required'] 
+                && signUpForm.get('name')?.touched
+                && !signUpForm.get('name')?.errors?.['valid'] ">
+                Name is Required
+            </span>
+        <span class='err' *ngIf="signUpForm.get('name')?.errors?.['pattern']">
+            please Enter Alphabet Only
+        </span>
+        <span class="err" *ngIf="signUpForm.get('name')?.errors?.['minlength'] && !signUpForm.get('name')?.errors?.['pattern']">
+            Enter Minimum 10 Characters
+        </span><br>
+
+
+        <label>Mobile No</label><br>
+        <input type="text" formControlName="mobNo"><br>
+
+        <span  *ngIf="!signUpForm.get('mobNo')?.touched 
+        && !signUpForm.get('mobNo')?.['valid']
+        && !signUpForm.get('mobNo')?.dirty">
+        Hint:Enter Your Mobile No
+    </span>
+    
+        <span class="err" *ngIf="signUpForm.get('mobNo')?.errors?.['pattern'] && signUpForm.get('mobNo')?.touched">
+            Mob No Should Be In Integer
+        </span>
+        <span class="err" *ngIf="signUpForm.get('mobNo')?.errors?.['minlength'] && !signUpForm.get('mobNo')?.errors?.['pattern']">
+            Please Enter Minimum 10 Digit mobNo
+        </span>
+        <span class='err' *ngIf="signUpForm.get('mobNo')?.errors?.['maxlength'] && !signUpForm.get('mobNo')?.errors?.['pattern']">
+            please Enter Maximum 10 Digit MobNo
+        </span><br>
+
+        <label>City</label><br>
+        <input type="text" formControlName="city"><br>
+
+        <span *ngIf="!signUpForm.get('city')?.touched
+        && !signUpForm.get('city')?.dirty
+        && !signUpForm.get('city')?.['valid']">
+        Hint:Enter Your City
+    </span>
+        <span class="err" *ngIf="signUpForm.get('city')?.errors?.['pattern'] && signUpForm.get('city')?.touched">
+            city contain Alphabets Only
+        </span>
+        <span class="err" *ngIf="signUpForm.get('city')?.errors?.['minlength'] && !signUpForm.get('city')?.errors?.['pattern']">Enter Minimum 3 alphabets</span><br>
+
+        <label>Address</label><br>
+        <input type="text" formControlName="address"><br>
+
+        <span class="err" *ngIf="signUpForm.get('address')?.errors?.['pattern'] && signUpForm.get('address')?.touched">Enter correct Address</span><br>
+
+        <!-- <label>Gender</label><br>
+        <input type="radio" formControlName="gender" value="male">Male<br><br> -->
+
+        <button [disabled]="!signUpForm.valid" (click)="submit()">submit</button>
+    </form>
+</div>

@@ -74,7 +74,7 @@
 
     <button (click)="back()" class="bck-btn">back button</button>
 
-    <h3 class="heading-css"> LOGIN SCREEN </h3>
+    <h3 class="heading-css"> LOGIN SCREEN (Template Driven)</h3>
 
     <form #loginForm='ngForm' class="form-css">
 
@@ -84,8 +84,8 @@
 
         <!-- <span class="spn-err" *ngIf="fullName.errors?.['required'] && fullName.touched">Full Name is required</span> -->
 
-        <span class="spn-err" *ngIf="fullName.errors?.['pattern'] && fullName.touched">Please Enter Alphabet Only</span>
-        <span class="spn-err" *ngIf="fullName.errors?.['minlength'] && !fullName.errors?.['pattern']">Full Name Should Be Having Atleast 5 Character</span>
+        <span class="spn-err" *ngIf="fullName.errors?.['pattern'] && fullName.touched">Please Enter Alphabet Only </span>
+        <span class="spn-err" *ngIf="fullName.errors?.['minlength'] && !fullName.errors?.['pattern']">Full Name Should Be Having Atleast 5 Character </span>
         
         <span></span>
 
@@ -93,10 +93,10 @@
 
         <input type="text" class="passinp-css" name='password' ngModel #password="ngModel"  minlength="8" pattern="[A-Z]{1}[a-zA-z0-9@#$%^!*&]{9}$"><br>
 
-        <span class="spn-err" *ngIf="password.errors?.['minlength']">password should contain 8 characters</span>
-        <span class="spn-err" *ngIf="password.errors?.['pattern'] && !password.errors?.['minlength']">please match the pattern</span>
+        <span class="spn-err" *ngIf="password.errors?.['minlength']">password should contain 8 characters </span>
+        <span class="spn-err1" *ngIf="password.errors?.['pattern'] && !password.errors?.['minlength']">please match the pattern </span>
        
-        <button class="sb-css" (click)="submitOne(loginForm.value)"> submit </button>
+        <button class="sb-css"[disabled]="!loginForm.valid" (click)="submitOne(loginForm.value)"> submit </button>
 
     </form>
 

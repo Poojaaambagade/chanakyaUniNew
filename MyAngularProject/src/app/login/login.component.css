@@ -15,37 +15,41 @@
     width: 100%;
 }
 .heading-css{
-    text-align: center;
+    margin-left: 321px;
 }
 .form-css{
     border: 1px solid black;
     height: 350px;
     width: 350px;
-    margin: auto;
-    text-align: center;
     background-color: darkturquoise;
+    padding: 20px 20px;
+    margin-left: 258px;
+
 }
 .usr-css{
     font-size: 17px;
     position: relative;
     top: 29px;
+    margin-left: 97px;
 }
 .usrinp-css{
     width: 220px;
     padding: 3px 3px;
     margin-top: 34px;
+    margin-left: 44px;
 }
 .pass-css{
     font-size: 17px;
     position: relative;
     top: 74px;
-    margin-right: 45px
+    margin-left: 97px;
 
 }
 .passinp-css{
     width: 220px;
     padding: 3px 3px;
     margin-top: 82px;
+    margin-left: 44px;
 }
 .sb-css{
     font-size: 17px;
@@ -53,6 +57,7 @@
     padding: 2px 2px;
     margin-top: 68px;
     background-color: greenyellow;
+    margin-left: 104px;
 }
 .bck-btn{
     border: none;
@@ -62,7 +67,18 @@
 .spn-err{
     color: darkred;
     font-size: 15px;
-    margin-left: 25px;
+    margin-left: 28px;
+    position: relative;
+    top: 2px;
+
+}
+.spn-err1{
+    color: darkred;
+    font-size: 15px;
+    margin-left: 28px;
+    position: relative;
+    top: -69px;
+
 
 }
     
