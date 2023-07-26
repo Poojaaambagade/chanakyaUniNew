@@ -1,0 +1,17 @@
+.signin-css{
+    height: 250px;
+    width: 250px;
+    border: 1px solid black;
+    background-color: antiquewhite;
+    padding: 5px 5px;
+    margin-left: 215px;
+    position: relative;
+    top: 75px;
+
+}
+.head-css{
+    margin-left: 195px;
+}
+.err{
+    color: red;
+}

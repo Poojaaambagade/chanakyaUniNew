@@ -19,7 +19,7 @@
 }
 .form-css{
     border: 1px solid black;
-    height: 350px;
+    height: 399px;
     width: 350px;
     background-color: darkturquoise;
     padding: 20px 20px;
@@ -55,7 +55,7 @@
     font-size: 17px;
     border: none;
     padding: 2px 2px;
-    margin-top: 68px;
+    margin-top: 124px;
     background-color: greenyellow;
     margin-left: 104px;
 }
@@ -78,6 +78,21 @@
     margin-left: 28px;
     position: relative;
     top: -69px;
+}
+.confpass-css{
+    margin-left: 97px;
+    position: relative;
+    top: 54px;
+
+}
+.confpass-inp-cass{
+    width: 220px;
+    width: 220px;
+    padding: 3px 3px;
+    position: relative;
+    top: 63px;
+    margin-left: 44px;
+
 
 
 }
