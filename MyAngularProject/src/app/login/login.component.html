@@ -93,12 +93,14 @@
         <input type="text" class="passinp-css" name='password' ngModel #password="ngModel"  minlength="8" pattern="[A-Z]{1}[a-zA-z0-9@#$%^!*&]{9}$"><br>
 
         <span class="spn-err" *ngIf="password.errors?.['minlength']">password should contain 8 characters </span>
-        <span class="spn-err1" *ngIf="password.errors?.['pattern'] && !password.errors?.['minlength']">please match the pattern </span>
+        <span class="spn-err1" *ngIf="password.errors?.['pattern'] && !password.errors?.['minlength'] && !confpass.errors?.['pattern']">please match the pattern </span>
 
         <label class="confpass-css">Confirm Password</label><br>
-        <input type="text" class="confpass-inp-cass" name="confpass" ngModel #confpass="ngModel">
+        <input type="text" class="confpass-inp-cass" name="confpass" ngModel #confpass="ngModel" pattern="[A-Z]{1}[a-zA-z0-9@#$%^!*&]{9}$">
+
+        <span *ngIf="confpass.errors?.['pattern'] && !password.errors?.['pattern']">Please Match the Pattern</span>
        
-        <button class="sb-css"[disabled]="!loginForm.valid" (click)="submitOne(loginForm.value)"> submit </button>
+        <button class="sb-css" [disabled]=!loginForm.valid (click)="submitOne(loginForm.value)"> submit </button>
 
     </form>
 

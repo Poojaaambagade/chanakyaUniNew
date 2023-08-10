@@ -1,10 +1,23 @@
 
 <div class="parent">
-    <h2 class="heading"> My Application </h2>
+    <h2 class="heading" *ngIf="!uName"> My Application </h2><!--uname madhe value nsel tar-->
+    <h2 class="heading" *ngIf="uName">WelCome {{uName}}</h2><!--uname madhe value asel tar-->
     <button (click)="login()" class="btn-css">login component</button>
     <button routerLink="/signUp" class="btn-css">signUp component</button>
     <button (click)="studentActivity()" class="btn-css">student Activity component</button>
     <button routerLink="/student/studentDemo" class="btn-css"> student Demo component</button>
     <button (click)="directive()" class="btn-css">directives</button>
+    <button (click)="parent()" class="btn-css">parent</button>
+    <button (click)="apiCall()" class="btn-css">apiCall</button>
+    <button (click)="getApiCall()" class="btn-css"> getApiCall </button>
+    <button (click)="form()" class="btn-css">postApi Form</button>
+    <button (click)="get()" class='btn-css'>getById</button>
+    <button (click)="deleteApi()" class="btn-css">deleteApi</button>
+    <h3>{{list}}</h3>
+    <h3>{{studentData}}</h3> 
 </div>
+
+<!--service madhe last process laa url refresh kara tarch output disnar-->
+
+
 

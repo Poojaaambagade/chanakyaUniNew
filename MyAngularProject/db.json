@@ -1,0 +1,185 @@
+{
+  "admin": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    },
+    {
+      "name": "pooooooooojaaa",
+      "mobNo": "0975297602",
+      "city": "pune",
+      "address": "GAJANAN NAGAR WARDHA MAHARASHTRA",
+      "gender": "female",
+      "id": 3
+    },
+    {
+      "name": "poojapoojs",
+      "mobNo": "0976697602",
+      "city": "WARDHA",
+      "address": "GAJANAN NAGAR WARDHA MAHARASHTRA",
+      "gender": "female",
+      "id": 5
+    },
+    {
+      "name": "poojapoojs",
+      "mobNo": "0976697602",
+      "city": "WARDHA",
+      "address": "GAJANAN NAGAR WARDHA MAHARASHTRA",
+      "gender": "female",
+      "id": 6
+    },
+    {
+      "name": "diya tamgire",
+      "mobNo": "1245789612",
+      "city": "WARDHA",
+      "address": " WARDHA MAHARASHTR",
+      "gender": "female",
+      "id": 7
+    },
+    {
+      "name": "diya tamgire",
+      "mobNo": "1245789612",
+      "city": "WARDHA",
+      "address": " WARDHA MAHARASHTR",
+      "gender": "female",
+      "id": 8
+    },
+    {
+      "name": "diya tamgire",
+      "mobNo": "1245789612",
+      "city": "WARDHA",
+      "address": " WARDHA MAHARASHTR",
+      "gender": "female",
+      "id": 9
+    },
+    {
+      "name": "abhishek shende",
+      "mobNo": "1247896342",
+      "city": "WARDHpune",
+      "address": "warje",
+      "gender": "male",
+      "id": 10
+    },
+    {
+      "name": "shanti raghatate",
+      "mobNo": "9634245782",
+      "city": "thane",
+      "address": "shree nagar",
+      "gender": "female",
+      "id": 11
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": [
+    {
+      "name": "typicode"
+    }
+  ],
+  "studentName": [
+    {
+      "studentName": "pooja",
+      "id": 1
+    },
+    {
+      "FullName": "pooja",
+      "Password": "Pooja@2000",
+      "ConfirmPassword": "Pooja@2000",
+      "id": 2
+    },
+    {
+      "FullName": "Riya ss",
+      "Password": "Riyaa@2000",
+      "ConfirmPassword": "Riyaa@2000",
+      "id": 3
+    },
+    {
+      "FullName": "pooja",
+      "Password": "Pooja@2025",
+      "ConfirmPassword": "Pooja@2025",
+      "id": 4
+    },
+    {
+      "FullName": "dddddd",
+      "Password": "Dagh@12585",
+      "ConfirmPassword": "Dagh@12585",
+      "id": 5
+    },
+    {
+      "FullName": "dddddd",
+      "Password": "Dagh@12585",
+      "ConfirmPassword": "Dagh@12585",
+      "id": 6
+    },
+    {
+      "FullName": "abcdsh",
+      "Password": "Kaka@12545",
+      "ConfirmPassword": "Kaka@12545",
+      "id": 7
+    },
+    {
+      "FullName": "addaa",
+      "Password": "Adda@123kg",
+      "ConfirmPassword": "Adda@123kg",
+      "id": 8
+    }
+  ],
+  "form": [
+    {
+      "Name": "pooja",
+      "MobNo": "9766975215",
+      "id": 1
+    },
+    {
+      "Name": "shreeya",
+      "MobNo": "9766975215",
+      "id": 2
+    },
+    {
+      "Name": "pooja",
+      "MobNo": "9755462154",
+      "id": 3
+    },
+    {
+      "Name": "pooja",
+      "MobNo": "9755462154",
+      "id": 4
+    },
+    {
+      "Name": "pooja",
+      "MobNo": "9755462154",
+      "id": 5
+    },
+    {
+      "Name": "pooja",
+      "MobNo": "9755462154",
+      "id": 6
+    },
+    {
+      "Name": "pooja",
+      "MobNo": "9755462154",
+      "id": 7
+    },
+    {
+      "Name": "rani",
+      "MobNo": "45",
+      "id": 8
+    },
+    {
+      "Name": "rani",
+      "MobNo": "45",
+      "id": 9
+    },
+    {
+      "Name": "",
+      "MobNo": "",
+      "id": 10
+    }
+  ]
+}

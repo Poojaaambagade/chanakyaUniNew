@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { StudentDataServiceService } from '../student-data-service.service';
+import { getLocaleMonthNames } from '@angular/common';
+import { DataServiceService } from 'src/app/data-service.service';
 
 @Component({
   selector: 'app-student-activity',
@@ -13,7 +16,15 @@ export class StudentActivityComponent {
   passwordValue:any;
   confirmPasswordValue:any;
   isMatch!:boolean;
-  constructor(private fb: FormBuilder) { }
+  showPass!:boolean;
+  studentService:any;
+
+
+  constructor(private fb: FormBuilder,
+    private studentDataServiceService :StudentDataServiceService,
+    private dataServiceService : DataServiceService) { }
+  
+  
 
 
   showForm() {
@@ -28,18 +39,19 @@ export class StudentActivityComponent {
     this.signInForm = this.fb.group({
       password: [],
       confpassword: [],
-      name:['',this.nameValidation]
+      name:['',[this.nameValidation,this.dataServiceService.whiteSpaceValidation]]
     })
   }
-  //custom function
+  // custom validation --function
   nameValidation(inp:any){
     console.log(inp.value);
-    let data=inp.value?.toLowerCase(); //(? value hogi to tolowercase me convert hoga otherwise error dega spo ? lagaya hai optional hota hai ? se)
+    let data=inp.value?.toLowerCase() //(? value hogi to tolowercase me convert hoga otherwise error dega spo ? lagaya hai optional hota hai ? se)
     let isErr=data.includes('copy');
     return isErr ? {Err:true} : null;
-    
+  
+  } 
 
-  }
+
 
   password() {
     // console.log('------', this.signInForm.value.password);
@@ -61,5 +73,18 @@ export class StudentActivityComponent {
     this.isMatch=false;
   }
   } 
-  
+  // eye icon of password logic
+  show(){
+    this.showPass = !this.showPass;
+
+  }
+  getData(){
+    this.studentService = this.studentDataServiceService.studentData;
+    console.log('>>>',this.studentService);
+    //resuability of code 
+      let x = this.studentDataServiceService.test(20,10)
+      console.log('x',x);
+      
+  }
 }
+      

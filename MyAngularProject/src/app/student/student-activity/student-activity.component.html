@@ -1,6 +1,9 @@
 
 <!-- button click pe form show karna hai -->
 
+
+<button (click)="getData()">getData</button>
+
 <h2 class="head-css">ShowHide On Button</h2>
 
 <button (click)="showForm()">show SignIn Form</button>
@@ -8,20 +11,37 @@
 <form class='signin-css' [formGroup]="signInForm" *ngIf="showSignInForm">
 
     <label class="pass">Password</label><br>
-    <input type="text" formControlName="password" (keyup)="password()"><br>  <!--keyup event trigger to every value which user will enter in input-->
+
+    <!--using eye effect on password-->
+
+    <input [type]="showPass ? 'text' : 'password'" formControlName="password" (keyup)="password()"><br>  
+    <button (click)="show()">show</button>
+
+    <br>  <!--we use here button but in angular material provides the show hide eye icon-->
+    <!--keyup event trigger to every value which user will enter in input-->
 
     <span class='err' *ngIf="!isMatch && signInForm.get('password')?.dirty">Password and confirmPassword should be same</span><br>
 
     <label>Confirm Password</label><br>
-    <input type="text" formControlName="confpassword" (keyup)="confirmPassword()"><br>
+    <input type="password" formControlName="confpassword" (keyup)="confirmPassword()"><br>
 
     <span class='err' *ngIf="!isMatch && signInForm.get('confpassword')?.dirty">Password and confirmPassword should be same</span>
     <!-- <span *ngIf="isMatch && !signInForm.get('password')?.errors?.['isMatch']">confiem password</span> (MyIdea) -->
+
+
+    <!-- custom validation of copy -->
 
     <label>name</label><br>
     <input type="text" formControlName="name"><br>
 
     <span class="err" *ngIf="signInForm.get('name')?.errors?.['Err']">name should not contain copy word</span>
+
+    <!-- whiteSpace validation -->
+
+    <span class="err" *ngIf="signInForm.get('name')?.errors?.['whiteSpace']">name should not contain whitespaces</span>
+
+
+    <!-- custom validation on password and confpassword ha been failed by mam but logically we did it  -->
 
     <!-- (18-06-2023 session nov batch custom in template driven)
     Custom validations (TITLE,TitLe,title,TiTlE we can write this word in almost 50ways )
@@ -29,6 +49,6 @@
     <input type="text" formContolName="title">
     <span *ngIf="signInForm.get('title')?.errors?.['required'] && signInForm.get('title')?.touched">title is required</span> -->
 
-
-
+   
 </form>
+

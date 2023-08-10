@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { DataServiceService } from '../data-service.service';
 
 @Component({
   selector: 'app-sign-up',
@@ -15,19 +16,29 @@ export class SignUpComponent {
 
 
   constructor(private router: Router,
-    private formBuilder: FormBuilder) { }
+    private formBuilder: FormBuilder,
+    private dataServiceService : DataServiceService) { }
+
+    student = {
+      'name' : 'pooja',
+      'city' : 'wardha',
+       no : 9766975021
+ }
 
 
 
   ngOnInit() {
     console.log('-----');
-    this.signUpFormControl();    //signupformcontrol function ngoninit ke andr q likha bcz jb compo load hoga tab form b load hona chaiye
+    this.signUpFormControl();  
+    console.log('student>>>',this.student);
+      //signupformcontrol function ngoninit ke andr q likha bcz jb compo load hoga tab form b load hona chaiye
+    this.dataServiceService.student=this.student
   }
 
 
   signUpFormControl() {
     this.signUpForm = this.formBuilder.group({
-      name: ['', [Validators.required,Validators.pattern('[a-zA-Z ]*$'), Validators.minLength(10)]],
+      name: ['', [Validators.required,Validators.pattern('[a-zA-Z ]*$'), Validators.minLength(10),this.dataServiceService.whiteSpaceValidation]],
       mobNo: ['',[Validators.pattern('[0-9]*$'),Validators.minLength(10),Validators.maxLength(10)]],
       city: ['',[Validators.pattern('[A-Za-z]*$'),Validators.minLength(3)]],
       address: ['',[Validators.pattern('[A-Za-z0-9@ -]*$')]],
@@ -40,11 +51,14 @@ export class SignUpComponent {
 
 
   back1() {
-    this.router.navigateByUrl('landing');
+    this.router.navigateByUrl('/landing');
 
   }
   submit(){
     console.log(this.signUpForm.value);
+    this.dataServiceService.userName=this.signUpForm.value.name;
+    this.dataServiceService.listOfUsers=['pooja','poonam','yash','rahul']
+    this.router.navigateByUrl('/landing');
     
   }
 }

@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { CommonApiCallService } from '../common-api-call.service';
 
 @Component({
   selector: 'app-login',
@@ -21,7 +22,8 @@ export class LoginComponent {
   testingEventDB:any;
   city="mumbai";
 
-  constructor(private router : Router){}
+ 
+  constructor(private router : Router , private commonApiCallService:CommonApiCallService){}
 
 
 
@@ -49,8 +51,18 @@ testingEventBinding(){
 back(){
   this.router.navigateByUrl("/landing");
 }
-submitOne(formData:any){
-  console.log(formData);
-  
-}
+  submitOne(formData: any) {
+    console.log(formData);
+    
+    
+    let requestData = {
+      FullName: formData.fullName,
+      Password: formData.password,
+      ConfirmPassword: formData.confpass
+    }
+    let endPoint = 'studentName';
+    this.commonApiCallService.postApiCall(endPoint, requestData).subscribe(resp => {
+      console.log(resp)
+    })
+  }
 }

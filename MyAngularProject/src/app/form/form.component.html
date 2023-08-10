@@ -1,0 +1,56 @@
+<p>form works!</p>
+<form [formGroup]="form">
+    <label>Name</label><br>
+    <input type="text" formControlName="name"><br>
+    <label>Mobile No</label><br>
+    <input type="text" formControlName="mobNo"><br><br>
+    <button (click)="save()">save</button>
+
+</form><br>
+
+
+<!-- 1st way --- filter data from table using ngModel-->
+<!-- 2nd way --- filter data from table using button click -->
+
+<!-- <input type="text" [(ngModel)]="searchVal"> search here (ist way)-->
+
+<input type="text" (keyup)="inputval($event)">
+<button (click)="search()">search</button>
+<br>
+
+<!-- get api data and create table -->
+
+<div class="div-class" *ngIf="adminData">
+    <table>
+        <tr>
+            <th *ngFor="let tableHeading of heading">{{tableHeading}}</th>
+        </tr>
+        <!-- <tr *ngFor="let data of adminData | filter:searchVal">1st way -->
+            <tr *ngFor="let data of adminData | filter:searchVal "> <!--2nd way-->
+            <td>{{data.name}}</td>
+            <td>{{data.mobNo}}</td>
+            <td>{{data.city}}</td>
+            <td>{{data.gender}}</td>
+        </tr>
+    </table>
+
+</div><br><br>
+
+<div>
+    {{myName}}<br>
+    {{myName | uppercase }}<br>
+    {{myName | lowercase }}
+</div><br><br>
+
+<div>
+    {{date}}<br> <!-- new Date() = puri date milti hai  (
+        Thu Aug 10 2023 09:25:32 GMT+0530 (India Standard Time))-->
+
+    {{date | date}}<br>  <!-- date = (Aug 10, 2023)-->
+
+    {{date | date : 'shortDate'}}<br><!-- date : 'shortDate' = 8/10/2023-->
+
+    {{date | date : 'fullDate'}}<!-- date : 'fullDate' =  Thursday, August 10, 2023-->
+
+</div><br>
+

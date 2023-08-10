@@ -5,6 +5,10 @@ import { SignUpComponent } from './sign-up/sign-up.component';
 import { HomeComponent } from './home/home.component';
 import { LandingScreenComponent } from './landing-screen/landing-screen.component';
 import { DirectivesInAngularComponent } from './directives-in-angular/directives-in-angular.component';
+import { ParentComponent } from './parent/parent.component';
+import { ChildComponent } from './child/child.component';
+import { FormComponent } from './form/form.component';
+
 
 const routes: Routes = [
 {path:"",component:LandingScreenComponent},
@@ -14,6 +18,9 @@ const routes: Routes = [
 {path:"signUp",component:SignUpComponent},
 {path:"home",component:HomeComponent},
 {path:"directives",component:DirectivesInAngularComponent},
+{path:'parent',component:ParentComponent},
+{path:'child',component:ChildComponent},
+{path:'form',component:FormComponent},
 {path:"admin",loadChildren:()=>import("./admin/admin.module").then(mod=>mod.AdminModule)},
 {path:"owner",loadChildren:()=>import("./owner/owner.module").then(mod=>mod.OwnerModule)},
 {path:"user",loadChildren:()=>import("./user/user.module").then(mod=>mod.UserModule)},

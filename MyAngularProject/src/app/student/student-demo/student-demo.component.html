@@ -1,2 +1,15 @@
 <button routerLink="/landing">back to Landing</button>
-<p>student-demo works!</p>
+<button (click)="setData()">Setdata</button>
+<button (click)="serviceFun()">serviceFun</button><br>
+----------------------------------------------------------<br>
+
+child data<br>
+
+<input type="text" (keyup)="child($event)"><br>
+
+-----    {{dataFromParent}}<br>
+-----------------------------------------------------------------------<br>
+
+keyup event : <input type="text" (keyup)="keyupEvent($event)"><br>
+blur event : <input type="text" (blur)="blur()"><br>
+focus event : <input type="text" (focus)="focus()">

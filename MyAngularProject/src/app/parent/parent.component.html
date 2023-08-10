@@ -1,0 +1,28 @@
+parenrt works<br>
+<!-- we get the data on action  -->
+<button (click)="set()">setData</button><br>
+
+<!-- now we get the data without action using parent child -->
+
+<input type="text" [(ngModel)]="parentData">
+{{parentData}}<br><br>
+{{valueFromChild}}<br>
+data from child          {{parent}}<br>
+parent data <input type="text" [(ngModel)]="pData">
+ p data {{pData}}<br>
+
+------------------------------------------------------------------------<br>
+<app-child [dataFromParent]="parentData" (dataFromChild)="get($event)"></app-child><br>
+
+
+<app-student-demo (dataFromChild)="getdata($event)" [dataFromParent]="pData"></app-student-demo><br>
+
+
+
+
+
+
+
+
+
+

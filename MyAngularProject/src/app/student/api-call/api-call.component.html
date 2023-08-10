@@ -1,3 +1,5 @@
+<p>api-call works!</p>
+
 <!-- component load hua ki form load karna hai using ngOnInit -->
 <div>
     <button (click)="back1()">back</button>
@@ -5,7 +7,7 @@
     <form class="signUp-class" [formGroup]="signUpForm">
 
         <label>Name</label><br>
-        <input type="text" formControlName="name" appCharonly><br>
+        <input type="text" formControlName="name"><br>
 
         <span
             *ngIf="!signUpForm.get('name')?.touched && !signUpForm.get('name')?.valid && !signUpForm.get('name')?.dirty">
@@ -29,7 +31,7 @@
 
 
         <label>Mobile No</label><br>
-        <input type="text" formControlName="mobNo" appNumbersonly><br>
+        <input type="text" formControlName="mobNo"><br>
 
         <span *ngIf="!signUpForm.get('mobNo')?.touched 
         && !signUpForm.get('mobNo')?.valid
@@ -50,7 +52,7 @@
         </span><br>
 
         <label>City</label><br>
-        <input type="text" formControlName="city" appCharonly><br>
+        <input type="text" formControlName="city"><br>
 
         <span *ngIf="!signUpForm.get('city')?.touched
         && !signUpForm.get('city')?.valid
@@ -79,4 +81,8 @@
 
         <button [disabled]="!signUpForm.valid" (click)="submit()">submit</button>
     </form>
+</div><br><br>
+
+<div>
+   Enter Student Name Here :  <input type="text" [(ngModel)]="studentName" (blur)="inputBox()">
 </div>
