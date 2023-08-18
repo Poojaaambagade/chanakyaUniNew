@@ -1,0 +1,35 @@
+<div class="btn-css">
+
+    <button mat-raised-button color="primary" (click)="back()">Back</button><br>
+
+</div>
+
+<!-- <div>
+
+    <button mat-raised-button color="accent" (click)="ownerLogin()" class="btn1">Login </button><br> 
+    <button mat-raised-button color="accent" class="btn3"> My Hotels</button>
+
+</div> -->
+
+<!-- OWNER SIG NUP FORM -->
+
+<mat-card class="matcard">
+    <mat-card-content>
+        <h2>Owner Login</h2>
+        <form [formGroup]="loginForm">
+            <mat-form-field class="fieldclass">
+                <mat-label>Name</mat-label>
+                <input matInput formControlName="name">
+            </mat-form-field><br>
+            <mat-form-field class="fieldclass">
+                <mat-label>Password</mat-label>
+                <input matInput formControlName="password">
+            </mat-form-field>
+            <div class="btnclass">
+                <button mat-raised-button color="accent" (click)="login()">Login</button>
+                <button mat-raised-button color="accent" (click)="ownerSignUp()" class="btn2">Owner Signup</button><br>
+            </div>
+        </form>
+    </mat-card-content>
+</mat-card>
+

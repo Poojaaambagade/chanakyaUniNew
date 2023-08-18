@@ -1,0 +1,47 @@
+{
+  "admin": [],
+  "owner": [
+    {
+      "Username": "shreeya",
+      "Email": "shreeya@gmail.com",
+      "Mobile": "4563257896",
+      "Password": "shreeya@125",
+      "Gender": "Female",
+      "id": 1
+    },
+    {
+      "Username": "shreeya",
+      "Email": "shreeya@gmail.com",
+      "Mobile": "457896789",
+      "Password": "shreeya@456",
+      "Gender": "Female",
+      "id": 2
+    },
+    {
+      "Username": "kiran",
+      "Email": "kiran@gmail.com",
+      "Mobile": "7854697520",
+      "Password": "kiran@125",
+      "Gender": "1",
+      "id": 9
+    },
+    {
+      "Username": "raju",
+      "Email": "raju@gmail.com",
+      "Mobile": "12457896",
+      "Password": "raju@123",
+      "Gender": "1",
+      "id": 11
+    },
+    {
+      "Username": "raju",
+      "Email": "raju@gmail.com",
+      "Mobile": "12457896",
+      "Password": "raju@125",
+      "Gender": "1",
+      "id": 12
+    }
+  ],
+  "user": [],
+  "hotelDetails": []
+}
